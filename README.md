@@ -16,9 +16,11 @@ This is a React application that provides a dashboard for displaying and managin
 ## Snippets of Project
 1. **Home Page**
    ![image](https://github.com/devkmaan/BookShelf/assets/140909236/43b91adb-44a1-4113-b45d-65b126064eaa)
-2. **Dashboard**
+   
+3. **Dashboard**
    ![image](https://github.com/devkmaan/BookShelf/assets/140909236/f23e04b8-ebeb-4c0a-95fe-c68b4b6eda95)
-3. **User BookShelf**
+   
+5. **User BookShelf**
    ![image](https://github.com/devkmaan/BookShelf/assets/140909236/4599c038-0ffa-40d7-84f5-f31c01b771f0)
 
    
