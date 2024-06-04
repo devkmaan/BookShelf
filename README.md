@@ -33,26 +33,20 @@ This is a React application that provides a dashboard for displaying and managin
 ## Deployment
 The application is deployed on Vercel. You can access it [here](https://marquee-assignment-dev.vercel.app/).
 
-# Set up the project locally
+## Set up the project locally
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+### To get started with the Bookshelf App, follow these steps:
 
-### `npm start`
+1) Clone the repository:
+git clone [https://github.com/yourusername/bookshelf-app.git](https://github.com/devkmaan/BookShelf.git)
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2) Install dependencies:
+npm install
 
-### `npm init`
-
-To install all node modules
-
-### `Axios`
-
-Used to axios to fetch data
-
-### `npm i react-router-dom`
-
-For navigation between different pages
+4) Start the development server:
+npm start
+The app should now be running on http://localhost:3000.
 
 ## `Thank you`
