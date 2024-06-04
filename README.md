@@ -1,4 +1,4 @@
-**For using the deployed App [here](https://marquee-assignment-dev.vercel.app/).**
+**Use the deployed App [here](https://marquee-assignment-dev.vercel.app/).**
 
 # BookShelf Application
 
