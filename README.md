@@ -39,9 +39,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### To get started with the Bookshelf App, follow these steps:
 
-1) Clone the repository:
-git clone [https://github.com/yourusername/bookshelf-app.git](https://github.com/devkmaan/BookShelf.git)
-
+1) Clone the repository
 2) Install dependencies:
 npm install
 
