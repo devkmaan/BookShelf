@@ -1,0 +1,68 @@
+import React, { useContext } from "react";
+import { data } from "../context/Context";
+
+function BookCard({ book }) {
+  const { mybooks, setmybooks } = useContext(data);
+
+  const addBooks = () => {
+    let storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    storedBooks.push({
+      title: book.title,
+      type: book.type,
+      author_name: book.author_name,
+      publish_year: book.publish_year,
+    });
+    localStorage.setItem("books", JSON.stringify(storedBooks));
+    setmybooks([...mybooks, book]);
+  };
+
+  const removebooks = (title) => {
+    const removebook = mybooks.filter(
+      (removebook) => removebook.title !== title
+    );
+    localStorage.setItem("books", JSON.stringify(removebook));
+    setmybooks(removebook);
+  };
+
+  return (
+    <>
+      <div className="flex flex-col max-w-sm border border-[2px] rounded-2xl ml-4 mr-4 mt-4 mb-4 bg-gray-50">
+        <div className="p-4">
+          <div className="flex flex-row items-end pt-4 pb-4">
+            <div className="text-[22px] pr-4">{book.title}</div>
+            <div className="text-[16px] opacity-60">({book.type})</div>
+          </div>
+          <div className="flex flex-row items-end justify-between">
+            <div className="text-[16px] pr-2 pb-4">{book.author_name}</div>
+            <div className="text-[16px] pr-2 pb-4">
+              {book.publish_year && typeof book.publish_year === "string"
+                ? book.publish_year.split(",")[0]
+                : Array.isArray(book.publish_year) &&
+                  book.publish_year.length > 0
+                ? book.publish_year[0]
+                : ""}
+            </div>
+          </div>
+          {mybooks.filter((mybook) => mybook.title === book.title).length >
+          0 ? (
+            <button
+              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-red-100 hover:shadow-xl hover:bg-red-300"
+              onClick={() => removebooks(book.title)}
+            >
+              Remove from Shelf
+            </button>
+          ) : (
+            <button
+              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-blue-100 hover:shadow-xl hover:bg-blue-200"
+              onClick={() => addBooks(book)}
+            >
+              Add to Shelf
+            </button>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default BookCard;
