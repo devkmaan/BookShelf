@@ -55,4 +55,4 @@ Used to axios to fetch data
 
 For navigation between different pages
 
-### `Thank you`
+## `Thank you`
